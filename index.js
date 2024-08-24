@@ -1,6 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api');
-const token = "7523555266:AAGNG1NOLyljGxFYnkxlvRQjQ1d2dEG474k"
-const webAppUrl = 'https://lovely-cajeta-5df60e.netlify.app/'
+require('dotenv').config(); 
+
+const token = process.env.TELEGRAM_BOT_TOKEN;
+const webAppUrl = process.env.WEB_APP_URL;
 
 const bot = new TelegramBot(token, {polling: true});
 
